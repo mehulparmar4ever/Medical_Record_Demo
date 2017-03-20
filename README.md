@@ -1,4 +1,4 @@
-## Welcome to the Medical_Record_Demo wiki!
+## Welcome to the Megical_Record_Demo wiki!
 
 ![](https://github.com/magicalpanda/magicalpanda.github.com/blob/master/images/awesome_logo_small.png?raw=true) Awesome MagicalRecord
 
