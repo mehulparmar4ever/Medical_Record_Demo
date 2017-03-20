@@ -12,3 +12,32 @@ You can also find another tutorials on  [code.tutsplus.com](https://code.tutsplu
 And here is the project page: [https://github.com/magicalpanda/MagicalRecord](https://github.com/magicalpanda/MagicalRecord)
 
 I hope this gives you an idea and simplifies your life as much as it did mine.
+
+### few lines for better understanding
+```sh
+MagicalRecord.setupCoreDataStack()
+// Setup MagicalRecord as per usual
+
+// Get coredata .sqlite file path
+print("URL - \(NSPersistentStore.mr_url(forStoreName: MagicalRecord.defaultStoreName()))")
+
+// Get all data 
+self.arrStudentList = Student.mr_findAll() as! [Student]
+
+// Create entity
+var selectedStudent : Student?
+selectedStudent = Student.mr_createEntity()
+
+// Delete entity
+objSubjectTemp.mr_deleteEntity()
+
+// Save data (save Managed Object Context)
+NSManagedObjectContext.mr_default().mr_saveToPersistentStore(completion: { (contextDidSave, error) in
+if contextDidSave {
+print("User Detail Saved")
+}
+else {
+print("error - \(error?.localizedDescription)")
+}
+})
+```
